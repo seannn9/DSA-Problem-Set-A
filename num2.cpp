@@ -5,14 +5,14 @@ using namespace std;
 
 int money() {
     int amount;
-    cout << "Enter amount: ";
+    cout << "Enter amount to be converted in php: ";
     cin >> amount;
     return amount;
 }
 
 string currency() {
     string type;
-    cout << "Pick currency:\n";
+    cout << "Pick currency to convert:\n";
     cout << "SGD - Singapore dollar\nUSD - US dollar\nYEN - Japanese yen\nEUR - Euros\n";
     cout << "Type: ";
     cin >> type;
@@ -25,15 +25,15 @@ int main() {
     float amount = money();
     string type = currency();
     if (type == "sgd") {
-        cout << "SGD -> PHP: " << amount * 40.76f << endl;
+        cout << "SGD -> PHP: " << amount * 40.76 << endl;
     } else if (type == "usd") {
-        cout << "USD -> PHP: " << amount * 55.24f << endl;
+        cout << "USD -> PHP: " << amount * 55.24 << endl;
     } else if (type == "yen") {
-        cout << "YEN -> PHP: " << amount * 0.40f << endl;
+        cout << "YEN -> PHP: " << amount * 0.40 << endl;
     } else if (type == "eur") {
-        cout << "EUR -> PHP: " << amount * 58.50f << endl;
+        cout << "EUR -> PHP: " << amount * 58.50 << endl;
     } else {
-        cout << "Invalid currency type";
+        cout << "Invalid currency type\n";
     }
     return 0;
 }
